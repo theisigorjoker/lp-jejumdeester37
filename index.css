@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #1a0b14;
+  background-color: #fbf7f9;
+  background-image: radial-gradient(70% 50% at 10% 0%, rgba(196, 30, 94, 0.09), transparent 60%),
+    radial-gradient(55% 45% at 95% 15%, rgba(244, 114, 182, 0.07), transparent 65%),
+    radial-gradient(65% 40% at 50% 45%, rgba(252, 231, 243, 0.5), transparent 70%),
+    radial-gradient(50% 35% at 5% 75%, rgba(196, 30, 94, 0.06), transparent 65%),
+    radial-gradient(60% 45% at 100% 100%, rgba(244, 114, 182, 0.08), transparent 65%);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  z-index: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+.font-title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.glow-text {
+  filter: drop-shadow(0 0 25px rgba(244, 114, 182, 0.35));
+}
+
+.glow-btn {
+  box-shadow: 0 0 40px rgba(196, 30, 94, 0.45);
+}
+.glow-btn:hover {
+  box-shadow: 0 0 60px rgba(196, 30, 94, 0.7);
+}
